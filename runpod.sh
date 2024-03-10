@@ -140,7 +140,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID} \
         --tasks arc_challenge \
         --num_fewshot 25 \
-        --batch_size  1 \
+        --batch_size  4 \
         --output_path ./${benchmark}.json
     
     benchmark="hellaswag"
@@ -148,7 +148,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID},trust_remote_code=$TRUST_REMOTE_CODE \
         --tasks hellaswag \
         --num_fewshot 10 \
-        --batch_size 1 \
+        --batch_size 4 \
         --output_path ./${benchmark}.json
 
     benchmark="mmlu"
@@ -156,7 +156,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID},trust_remote_code=$TRUST_REMOTE_CODE \
         --tasks mmlu \
         --num_fewshot 5 \
-        --batch_size 1 \
+        --batch_size 4 \
         --verbosity DEBUG \
         --output_path ./${benchmark}.json
 
@@ -165,7 +165,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID},trust_remote_code=$TRUST_REMOTE_CODE \
         --tasks truthfulqa \
         --num_fewshot 0 \
-        --batch_size 1 \
+        --batch_size 4 \
         --output_path ./${benchmark}.json
     
     benchmark="winogrande"
@@ -173,7 +173,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID},trust_remote_code=$TRUST_REMOTE_CODE \
         --tasks winogrande \
         --num_fewshot 5 \
-        --batch_size 1 \
+        --batch_size 4 \
         --output_path ./${benchmark}.json
     
     benchmark="gsm8k"
@@ -181,7 +181,7 @@ elif [ "$BENCHMARK" == "openllm" ]; then
         --model_args pretrained=${MODEL_ID},trust_remote_code=$TRUST_REMOTE_CODE \
         --tasks gsm8k \
         --num_fewshot 5 \
-        --batch_size 1 \
+        --batch_size 4 \
         --output_path ./${benchmark}.json
 
     end=$(date +%s)
