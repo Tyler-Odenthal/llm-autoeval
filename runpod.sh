@@ -129,7 +129,7 @@ elif [ "$BENCHMARK" == "peft-nous" ]; then
     python ../llm-autoeval/main.py . $(($end-$start))    
 
 elif [ "$BENCHMARK" == "openllm" ]; then
-    git clone -b b281b09 https://github.com/EleutherAI/lm-evaluation-harness.git
+    git clone https://github.com/EleutherAI/lm-evaluation-harness
     cd lm-evaluation-harness
     python -m pip install --upgrade pip
     pip install -e .
